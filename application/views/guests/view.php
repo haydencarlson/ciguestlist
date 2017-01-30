@@ -5,6 +5,7 @@
 </div>
 
 <hr>
-<?php echo form_open('/guests/delete/'.$guest['id']); ?>
+<?php print_r($guest['id']); ?>
+<?php echo form_open('index.php/guests/delete/'.$guest['id']); ?>
 	<input type="submit" value="Delete" class="btn btn-danger">
 </form>
