@@ -21,4 +21,9 @@
 			);
 			return $this->db->insert('guests', $data);
 		}
+		public function delete_guest($id) {
+			$this->db->where('id', $id);
+			$this->db->delete('guests');
+			return true;
+		}
 	}

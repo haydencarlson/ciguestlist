@@ -33,6 +33,7 @@
 			}
 		}
 		public function delete($id) {
-			echo $id;
+			$this->Guest_model->delete_guest($id);
+			redirect('index.php/guests');
 		}
 	}
