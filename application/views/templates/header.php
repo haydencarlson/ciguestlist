@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
         <li class="active"><a href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="<?php echo base_url(); ?>/index.php/about">About</a></li>
+        <li><a href="<?php echo base_url(); ?>index.php/guests/create">Create Guest</a></li>
       </ul>
     </div>
   </div>
