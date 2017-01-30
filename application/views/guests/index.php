@@ -6,5 +6,5 @@
 	<br><br>
 	<?php echo $guest['comment']?>
 	<hr>
-	<p><a class="btn btn-default" href="<?php echo site_url('/posts/'.$post['slug']); ?>">Read More</a></p>
+	<p><a class="btn btn-default" href="<?php echo site_url('index.php/guests/'.$guest['slug']); ?>">Read More</a></p>
 <?php endforeach; ?>
