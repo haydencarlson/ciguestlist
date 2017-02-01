@@ -23,6 +23,7 @@
 			$this->form_validation->set_rules('name', 'Name', 'required');
 			$this->form_validation->set_rules('comment', 'Comment', 'required');
 			$this->form_validation->set_rules('email', 'Email', 'required');
+			$this->form_validation->set_rules('spam', 'Spam', 'required|callback_isspam');
 			if ($this->form_validation->run() === FALSE) {
 				$this->load->view('templates/header');
 				$this->load->view('guests/create', $data);
@@ -32,8 +33,17 @@
 				redirect('index.php/guests');
 			}
 		}
+	
 		public function delete($id) {
 			$this->Guest_model->delete_guest($id);
 			redirect('index.php/guests');
+		}
+		public function isspam() {
+			if ($this->input->post('spam') !== '7') {
+				$this->form_validation->set_message('isspam', 'Incorrect answer');
+				return false;
+			} else {
+				return true;
+			}
 		}
 	}
