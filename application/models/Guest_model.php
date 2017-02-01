@@ -13,6 +13,7 @@
 			return $query->row_array();
 		}
 		public function create_guest() {
+			//create our slug
 			$slug = url_title($this->input->post('name'));
 			$data = array(
 				'name' => $this->input->post('name'),
