@@ -2,7 +2,7 @@
 <?php echo validation_errors(); ?>
 <?php echo form_open('index.php/guests/create'); ?>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
+    <label>Email</label>
     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
@@ -10,8 +10,10 @@
     <label for="Name">Name</label>
     <input class="form-control" id="yourName" name="name" placeholder="Enter your name">
   </div>
- 
- 
+  <div class="form-group">
+    <label for="Spam">Spam</label>
+    <input class="form-control" id="spam" name="spam" placeholder="What is 4 + 3?">
+  </div>
    <div class="form-group">
     <label for="exampleTextarea">Comment</label>
     <textarea class="form-control" name="comment" id="exampleTextarea" rows="3"></textarea>
